@@ -10,6 +10,6 @@ Base = declarative_base()
 
 # Write needed classes here
 
-#create_engine('sqlite:///project.db') # For local use
-engine = create_engine(os.environ["DATABASE_URL"])
+engine = create_engine('sqlite:///project.db') # For local use
+#engine = create_engine(os.environ["DATABASE_URL"])
 Base.metadata.create_all(engine)

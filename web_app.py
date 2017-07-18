@@ -11,5 +11,9 @@ Base.metadata.bind = engine
 DBSession = sessionmaker(bind=engine)
 dbsession = DBSession()
 
+@app.route('/')
+def main_page():
+	return render_template('under_construction.html')
+
 if __name__ == '__main__':
 	app.run(debug=True, threaded=True)
